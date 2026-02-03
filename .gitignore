@@ -1,0 +1,10 @@
+/work/
+/native-builds/
+
+/app/
+/electron/
+/extracted/
+
+*.log
+
+*.dmg
