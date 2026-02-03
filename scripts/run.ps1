@@ -103,6 +103,35 @@ function Write-Header([string]$Text) {
   Write-Host "`n=== $Text ===" -ForegroundColor Cyan
 }
 
+function Patch-Preload([string]$AppDir) {
+  $preload = Join-Path $AppDir ".vite\build\preload.js"
+  if (-not (Test-Path $preload)) { return }
+  $raw = Get-Content -Raw $preload
+  $processExpose = 'const P={env:process.env,platform:process.platform,versions:process.versions,arch:process.arch,cwd:()=>process.env.PWD,argv:process.argv,pid:process.pid};n.contextBridge.exposeInMainWorld("process",P);'
+  if ($raw -notlike "*$processExpose*") {
+    $re = 'n\.contextBridge\.exposeInMainWorld\("codexWindowType",[A-Za-z0-9_$]+\);n\.contextBridge\.exposeInMainWorld\("electronBridge",[A-Za-z0-9_$]+\);'
+    $m = [regex]::Match($raw, $re)
+    if (-not $m.Success) { throw "preload patch point not found." }
+    $raw = $raw.Replace($m.Value, "$processExpose$m")
+    Set-Content -NoNewline -Path $preload -Value $raw
+  }
+}
+
+
+function Ensure-GitOnPath() {
+  $candidates = @(
+    (Join-Path $env:ProgramFiles "Git\cmd\git.exe"),
+    (Join-Path $env:ProgramFiles "Git\bin\git.exe"),
+    (Join-Path ${env:ProgramFiles(x86)} "Git\cmd\git.exe"),
+    (Join-Path ${env:ProgramFiles(x86)} "Git\bin\git.exe")
+  ) | Where-Object { $_ -and (Test-Path $_) }
+  if (-not $candidates -or $candidates.Count -eq 0) { return }
+  $gitDir = Split-Path $candidates[0] -Parent
+  if ($env:PATH -notlike "*$gitDir*") {
+    $env:PATH = "$gitDir;$env:PATH"
+  }
+}
+
 Ensure-Command node
 Ensure-Command npm
 Ensure-Command npx
@@ -175,6 +204,9 @@ if (-not $Reuse) {
     & robocopy $unpacked $appDir /E /NFL /NDL /NJH /NJS /NC /NS | Out-Null
   }
 }
+
+Write-Header "Patching preload"
+Patch-Preload $appDir
 
 Write-Header "Reading app metadata"
 $pkgPath = Join-Path $appDir "package.json"
@@ -296,6 +328,8 @@ if (-not $NoLaunch) {
   $env:BUILD_FLAVOR = $buildFlavor
   $env:NODE_ENV = "production"
   $env:CODEX_CLI_PATH = $cli
+  $env:PWD = $appDir
+  Ensure-GitOnPath
 
   New-Item -ItemType Directory -Force -Path $userDataDir | Out-Null
   New-Item -ItemType Directory -Force -Path $cacheDir | Out-Null
